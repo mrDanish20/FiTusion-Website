@@ -1,0 +1,273 @@
+/* Section Base */
+.fitness-section {
+  background: #000;
+  color: #e8ffe1;
+  padding: 80px 20px;
+  text-align: center;
+  /* font-family: "Helvetica Neue", Arial, sans-serif;  */
+}
+
+.fitness-title {
+  font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+.fitness-title .highlighted-text {
+    background: #EAFD92;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+}
+
+
+.fitness-subtitle {
+  color: #aaa;
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto 50px;
+  letter-spacing: 0.5px;
+}
+
+/* Cards Layout */
+.fitness-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  justify-content: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Card Base */
+.fitness-card {
+  background: linear-gradient(145deg, #1a1b14 0%, #0f100b 100%);
+  border-radius: 28px;
+  overflow: hidden;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  transition: all 0.4s ease;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  min-height: 420px;
+}
+
+/* Hover Background Color Change */
+.fitness-card:hover {
+  transform: translateY(-5px);
+  background: linear-gradient(145deg, #424735 0%, #424735 100%);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+}
+
+/* Card Image */
+.fitness-image {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0 28px 28px 0;
+}
+
+.fitness-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.85);
+  transition: transform 0.5s ease;
+}
+
+.fitness-card:hover .fitness-image img {
+  transform: scale(1.05);
+}
+
+/* Card Content */
+.fitness-content {
+  flex: 1;
+  padding: 40px 30px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.fitness-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ccff5f;
+  margin-bottom: 15px;
+}
+
+.fitness-content p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.fitness-btn {
+  background-color: #ccff5f;
+  color: #000;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+}
+
+.fitness-btn:hover {
+  background: #8BB304;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(94, 114, 4, 0.4);
+}
+
+/* Floating Stat Cards */
+.fitness-stat {
+  position: absolute;
+  width: 110px;
+  padding: 0.9rem 0.5rem;
+  background: linear-gradient(145deg, #5F634F, #2B2D25);
+  border-radius: 18px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  z-index: 3;
+}
+
+.fitness-stat:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.7);
+}
+
+.stat-icon {
+  font-size: 1.4rem;
+  color: #a4ff2f;
+  margin-bottom: 0.4rem;
+}
+
+.fitness-stat p {
+  margin: 0;
+  font-size: 0.8rem;
+  color: #eee;
+}
+
+.fitness-stat h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+/* Stat Position (moved near button) */
+.stat-bottom {
+  bottom: 25px;
+  left: 160px;
+  transform: rotate(-20deg);
+}
+
+.stat-right {
+  bottom: 25px;
+  left:  40px;
+  transform: rotate(20deg);
+
+
+}
+
+/* Equal height adjustment */
+.fitness-second {
+  flex-direction: row-reverse;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .fitness-cards {
+    width: 90%;
+    gap: 30px;
+  }
+  .fitness-content {
+    padding: 30px 25px;
+  }
+
+  .stat-bottom {
+    left: 120px;
+  }
+
+  .stat-right {
+    right: 120px;
+  }
+}
+
+@media (max-width: 850px) {
+  .fitness-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .fitness-card {
+    flex-direction: column;
+    min-height: 380px;
+  }
+
+  .fitness-second {
+    flex-direction: column-reverse;
+  }
+
+  .fitness-image {
+    border-radius: 0 0 28px 28px;
+    height: 320px;
+  }
+
+  .fitness-content h3 {
+    font-size: 1.4rem;
+  }
+
+  .fitness-content p {
+    font-size: 0.9rem;
+  }
+
+  .fitness-stat {
+    width: 90px;
+    padding: 0.6rem;
+  }
+
+  .stat-bottom,
+  .stat-right {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    right: auto;
+    margin-top: 20px;
+    align-self: flex-start;
+  }
+}
+
+@media (max-width: 600px) {
+  .fitness-title {
+    font-size: 2rem;
+  }
+
+  .fitness-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .fitness-btn {
+    padding: 9px 20px;
+    font-size: 0.8rem;
+  }
+
+  .fitness-stat h3 {
+    font-size: 1rem;
+  }
+
+  .fitness-stat p {
+    font-size: 0.7rem;
+  }
+}

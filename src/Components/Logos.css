@@ -1,0 +1,55 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+
+.logos-section {
+  width: 100%;
+  background: #000000;
+
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.logos-container {
+  margin-top: 2%;
+
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 30px;
+  align-items: center;
+  justify-items: center;   
+  width: 100%;
+  max-width: 1200px;
+   box-sizing: border-box; 
+}
+
+.logos-container img {
+  margin-top: 60px;
+  max-width: 130px;
+  height: 50px;
+  object-fit: contain;     /* ✅ keeps proportions */
+  filter: brightness(0) invert(1); /* makes black → white */
+  transition: transform 0.3s ease;
+}
+
+.logos-container img:hover {
+  transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .logos-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .logos-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

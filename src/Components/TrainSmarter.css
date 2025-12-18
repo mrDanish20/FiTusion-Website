@@ -1,0 +1,116 @@
+.train-section {
+  background: #000;
+  color: #d4ff5f;
+  padding: 80px 20px;
+  text-align: center; 
+  /* font-family: "Helvetica Neue", Arial, sans-serif;  */
+}
+
+.train-container {
+  max-width: 1100px;
+  margin: 0 auto;
+
+}
+
+.train-title {
+   font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+    color: white;
+}
+
+.train-title .highlighted-text {
+    background: #EAFD92;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+}
+
+
+.train-subtitle {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin-bottom: 60px;
+}
+
+.train-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Always 3 per row on large screens */
+  gap: 30px;
+}
+
+/* Card Styling */
+.train-card {
+    margin-top: 10px;
+  background: #000000;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  height: 500px;
+  transition: transform 0.3s ease;
+}
+
+.card-img-wrapper {
+  position: relative;
+}
+
+.train-card img {
+  width: 85%;
+  height: 450px;
+  object-fit: contain;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Green corner effect */
+/* .corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25px;
+  height: 25px;
+  background: #d4ff5f;
+  clip-path: polygon(100% 0, 0 0, 100% 100%);
+  border-radius: 0 12px 0 0;
+} */
+
+.train-card h3 {
+  font-size: 1rem;
+  color: #d4ff5f;
+  margin: 12px 0;
+  margin-top: 5px;
+  margin-right: 40px;
+}
+
+.train-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Responsive: tablets = 2 per row, mobiles = 1 per row */
+@media (max-width: 991px) {
+  .train-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .train-grid {
+    grid-template-columns: 1fr;
+
+  }
+  .train-card {
+    width: 89%;            /* Not full width */
+    margin: 0 auto;        /* Ensures perfect centering */
+  }
+
+  .train-card img {
+    width: 100%;           /* Center image properly */
+    height: auto;
+  }
+  
+}

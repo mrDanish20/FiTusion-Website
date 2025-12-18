@@ -1,0 +1,162 @@
+.contacts-section {
+  background: radial-gradient(circle at top left, #0a0a0a 0%, #000 100%);
+  color: #eaffd3;
+  text-align: center;
+  padding: 100px 20px;
+  position: relative;
+
+
+
+}
+
+.contacts {
+
+  width: 100%;
+  max-width: 1250px;
+  height: 350px;
+  border-radius: 48px;
+  background-color: #A0D21F;
+  margin: 0 auto;
+  padding-top: 60px;
+  margin-bottom: 80px;
+  /* ✅ new line */
+}
+
+.contacts-title {
+  color: black;
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-top: 0;
+  /* margin no longer needed */
+}
+
+.contacts-subtitle {
+  color: rgba(255, 255, 255, 0.797);
+  letter-spacing: 1px;
+}
+
+.contacts-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 70px;
+}
+
+.contacts-input input {
+  padding: 14px 100px 14px 20px;
+  border: none;
+  border-radius: 12px;
+
+  font-size: 1rem;
+  outline: none;
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.contacts-input input:focus {
+  box-shadow: 0 0 15px rgba(160, 210, 31, 0.6);
+}
+
+.join-now {
+  background-color: #000;
+  color: #eaffd3;
+  padding: 14px 24px;
+  border-radius: 12px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.join-now:hover {
+  background-color: #161616;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(160, 210, 31, 0.6);
+}
+
+/* ✅ Responsive Breakpoints */
+
+/* Tablets */
+@media (max-width: 992px) {
+  .contacts {
+    padding: 50px 30px;
+  }
+
+  .contacts-title {
+    font-size: 2.5rem;
+  }
+
+  .contacts-subtitle {
+    font-size: 1rem;
+    max-width: 650px;
+  }
+
+  .contacts-input {
+    margin-top: 50px;
+  }
+
+  .contacts-input input {
+    max-width: 400px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contacts-section {
+    padding: 70px 15px;
+  }
+
+  .contacts {
+    padding: 40px 20px;
+  }
+
+  .contacts-title {
+    font-size: 2.2rem;
+  }
+
+  .contacts-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+
+  .contacts-input {
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 40px;
+  }
+
+  .contacts-input input {
+    width: 100%;
+    padding: 12px 18px;
+    text-align: center;
+  }
+
+  .join-now {
+    width: 100%;
+    padding: 12px 18px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .contacts-title {
+    font-size: 1.8rem;
+  }
+
+  .contacts-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .contacts-input input,
+  .join-now {
+    font-size: 0.9rem;
+    border-radius: 10px;
+  }
+}

@@ -1,0 +1,115 @@
+.Cards-section {
+  background: #000000;
+  color: #f4f6e9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.Cards-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: -0.5px;
+}
+
+.Cards-title .highlighted-text {
+  background: #EAFD92;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 800;
+}
+
+.Cards-subtitle {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  font-weight: 300;
+  margin-bottom: 50px;
+  color: #cccccc;
+}
+
+/* Grid layout for cards */
+.Cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 20px;
+  gap: 30px;
+}
+
+/* Individual card */
+.Card {
+  background: #1a1a1a;
+  border-radius: 15px;
+  padding: 30px 20px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Card:hover {
+  /* transform: translateY(-10px); 
+   */
+  box-shadow: 0 10px 30px rgba(234, 253, 146, 0.5);
+    transform: translateY(-5px);
+
+}
+
+.Card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.Card-price {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 2px;
+  color: #d0f25b;
+}
+
+.Card-duration {
+  font-size: 1rem;
+  font-weight: 300;
+  margin-bottom: 35px;
+  color: #cccccc;
+}
+
+.Card-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 35px;
+}
+
+.Card-features li {
+  margin: 10px 0;
+  font-size: 0.95rem;
+}
+
+.Card-btn {
+  background: transparent;
+  color: #b6ff40;
+  border: 1px solid #b6ff40;
+  padding: 18px 40px;
+  transition: background 0.3s ease;
+  border-radius: 30px;
+
+}
+
+.Card-btn:hover {
+  background: linear-gradient(90deg, #9ACD03, #AACC04);
+  border: 1px solid transparent;
+  color: black;
+
+}
+
+.Card-One {
+  /* background-color: grey;  */
+  border: 1px solid grey;
+  width: 400px;
+  height: 600px;
+
+}

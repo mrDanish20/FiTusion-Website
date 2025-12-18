@@ -1,0 +1,132 @@
+.Form-section {
+  background-color: #000000;
+  color: #fff;
+  padding: 80px 10%;
+  font-family: "Poppins", sans-serif;
+}
+
+.Form-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.Form-info {
+  flex: 1;
+  min-width: 300px;
+}
+
+.Form-subtitle {
+  color: #EAFD92;
+  font-weight: 600;
+  letter-spacing: 1.8px;
+  text-align: start;
+}
+
+.Form-title {
+  font-size: 2.2rem;
+  text-align: start;
+  margin: 10px 0 40px;
+  font-weight: 700;
+}
+
+.Form-title span {
+  color: #EAFD92;
+}
+
+.info-item {
+  margin-bottom: 30px;
+  margin-right: 190px;
+  transition: .3s ease-in-out;
+}
+
+.Form-desc {
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 40px;
+  max-width: 500px;
+  text-align: start;
+}
+
+/* ✅ Removed icon-circle styles */
+
+.info-text {
+  margin-top: 30px;
+  border-top: 1px solid #222;
+  padding-top: 25px;
+  margin-top: 25px;
+}
+
+.info-text p {
+  color: #ccc;
+  font-size: 15px;
+  margin-bottom: 10px;
+  line-height: 1.6;
+  text-align: start;
+}
+
+.info-text strong {
+  color: #EAFD92;
+  font-weight: 600;
+}
+
+.Form-form {
+  flex: 1;
+  min-width: 300px;
+}
+
+.Form-form form {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.Form-form input,
+.Form-form textarea {
+  background-color: #111;
+  border: 1px solid #222;
+  color: #fff;
+  padding: 15px;
+  font-size: 15px;
+  border-radius: 2px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.Form-form input:focus,
+.Form-form textarea:focus {
+  border: 1px solid #EAFD92;
+}
+
+.Form-form button {
+  background-color: #EAFD92;
+  color: #fff;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.Form-form button:hover {
+  background: linear-gradient(90deg, #9ACD03, #AACC04);
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+  .Form-container {
+    flex-direction: column;
+  }
+
+  .Form-title {
+    font-size: 1.8rem;
+  }
+
+  .Form-form button {
+    font-size: 15px;
+  }
+}

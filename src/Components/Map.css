@@ -1,0 +1,49 @@
+.Map-section {
+  background-color: #000;
+  color: #fff;
+  overflow: hidden;
+  text-align: center;
+  padding: 60px 5%;
+  font-family: "Poppins", sans-serif;
+}
+
+
+.Map-container {
+  height: 500px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto 100px;
+
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+/* 📱 Responsive Design */
+@media (max-width: 992px) {
+  .Map-container {
+    height: 400px;
+    margin-bottom: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .Map-container {
+    height: 350px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Map-container {
+    height: 300px;
+  }
+
+  .Cards-title {
+    font-size: 1.8rem;
+  }
+
+  .Cards-subtitle {
+    font-size: 0.95rem;
+    padding: 0 10px;
+  }
+}

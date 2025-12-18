@@ -1,0 +1,744 @@
+/* ---------- Hero Section ---------- */
+.hero-section {
+  background: #0f0f0f;
+  min-height: 100vh;
+  color: #f4f6e9;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  padding: 0 3%;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.hero-body {
+  position: relative;
+  background-color: transparent;
+  text-align: center;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ---------- Header ---------- */
+.hero-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 1002;
+}
+
+.logo-mark {
+  width: 60px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.logo-text {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin-left: 120px;
+}
+
+.nav a {
+  margin: 0 1rem;
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav a:hover {
+  color: #fff;
+}
+
+.btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  font-weight: 550;
+  white-space: nowrap;
+}
+
+.btn.contact {
+  background: linear-gradient(90deg, #9ACD03, #AACC04);
+  color: #0f0f0f;
+}
+
+.btn.start {
+  background: transparent;
+  color: #b6ff40;
+  border: 1px solid #b6ff40;
+  transition: all 0.6s ease-in-out;
+}
+
+.btn.start:hover {
+  background: linear-gradient(90deg, #9ACD03, #AACC04);
+  color: #0f0f0f;
+  border: 1px solid transparent;
+}
+
+/* ---------- Body ---------- */
+.hero-title {
+  font-size: 4.5rem;
+  font-weight: 1000;
+  line-height: 1.1;
+  margin-bottom: 3rem;
+  color: #F4FFC5;
+  position: relative;
+  z-index: 0;
+  text-align: center;
+}
+
+.hero-title span {
+  color: #6D7550;
+  position: relative;
+  z-index: 3;
+}
+
+.side-text {
+  position: absolute;
+  top: 38%;
+  transform: translateY(-50%);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 2rem;
+  letter-spacing: 1.5rem;
+  color: #aaa;
+  z-index: 5;
+  cursor: pointer;
+  transition: .2s ease-in-out;
+}
+
+.side-text:hover {
+  color: white;
+}
+
+.side-text.left {
+  left: 0;
+}
+
+.side-text.right {
+  right: 0;
+}
+
+/* ---------- Image & Overlay ---------- */
+.img-wrap {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  margin-top: -200px;
+  height: 550px;
+  object-fit: contain;
+  border-radius: 40px;
+  filter: brightness(0.95);
+  z-index: 2;
+  position: relative;
+}
+
+/* floating stat cards */
+.stat-card {
+  position: absolute;
+  width: 120px;
+  padding: 1rem 0.2rem;
+  background: linear-gradient(145deg, #5F634F, #2B2D25);
+  border-radius: 18px;
+  text-align: center;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(56, 41, 41, 0.2);
+  z-index: 4;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: scale(1.08) rotate(0deg);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.6);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  color: #a4ff2f;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: white;
+  margin-bottom: 3px;
+}
+
+.stat-card h3 {
+  margin: 0;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.top-left {
+  top: -20px;
+  left: 120px;
+  transform: rotate(-20deg);
+}
+
+.top-right {
+  top: -20px;
+  right: 120px;
+  transform: rotate(20deg);
+}
+
+.bottom-left {
+  bottom: 60px;
+  left: 70px;
+  transform: rotate(-20deg);
+}
+
+.bottom-right {
+  bottom: 60px;
+  right: 70px;
+  transform: rotate(20deg);
+}
+
+/* avatars - HIDDEN ON MOBILE */
+.avatars {
+  position: absolute;
+  bottom: 70px;
+  left: -220px;
+  /* display: flex; */
+  align-items: center;
+  z-index: 4;
+}
+
+.avatars img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid #0f0f0f;
+  object-fit: cover;
+  margin-left: -30px;
+}
+
+.avatar-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2px;
+}
+
+.avatar-text h2 {
+  margin: 0;
+  margin-left: -1px;
+  margin-bottom: 30px;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.avatar-text p {
+  margin: 0;
+  font-size: 0.8rem;
+  margin-bottom: 30px;
+  color: #bbb;
+}
+
+/* CTA button - HIDDEN ON MOBILE */
+.cta {
+  position: absolute;
+  right: -260px;
+  bottom: 70px;
+  padding: 1rem 2.0rem;
+  background: linear-gradient(90deg, #9ACD03, #AACC04);
+  color: #0f0f0f;
+  font-weight: 700;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  z-index: 4;
+  white-space: nowrap;
+}
+
+/* ---------- Mobile Menu ---------- */
+.menu-icon {
+  display: none;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+/* ---------- MOBILE STYLES ---------- */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: #000000;
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    border: 1px solid #A4CD04; 
+    padding: 1.5rem;
+    width: 85%;
+    max-width: 260px;
+    border-radius: 12px;
+    text-align: center;
+    z-index: 1000;
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav a {
+    display: block;
+    margin: 0.8rem 0;
+    font-size: 1.1rem;
+    color: #ccc;
+  }
+  
+
+  /* Hide buttons outside menu on mobile */
+  .btns {
+    display: none;
+  }
+
+  /* Show buttons inside mobile menu */
+  .nav .btns {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    gap: 0.8rem;
+    width: 100%;
+  }
+
+  .nav .btn {
+    width: 100%; 
+    padding: 0.8rem 1.5rem;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  /* MOBILE: Side buttons - keep vertical like desktop */
+  .side-text {
+    position: absolute;
+    writing-mode: vertical-rl; /* Keep vertical orientation */
+    text-orientation: mixed;
+    top: 70%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    letter-spacing: 1rem;
+    padding: 10px 15px;
+
+    border-radius: 8px;
+
+    z-index: 10;
+  }
+
+  .side-text.left {
+    left: 10px;
+    right: auto;
+  }
+
+  .side-text.right {
+    right: 10px;
+    left: auto;
+  }
+
+  /* Center content on mobile */
+  .hero-body {
+    justify-content: flex-start;
+    padding-top: 2rem;
+  }
+
+  /* MOBILE: Bigger title */
+  .hero-title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    width: 100%;
+    text-align: center;
+    line-height: 1.2;
+  }
+
+  /* MOBILE: Bigger image container */
+  .img-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  /* MOBILE: Bigger image */
+  .hero-image {
+    margin-top: 0;
+    height: 400px;
+    width: 95%;
+    max-width: 500px;
+    border-radius: 25px;
+    object-fit: cover; /* Changed from contain to cover for better mobile display */
+  }
+
+  /* MOBILE: Hide avatars and CTA button */
+  .avatars,
+  .cta {
+    display: none !important;
+  }
+
+  /* MOBILE: Adjust stat cards */
+  .stat-card {
+    width: 100px;
+    padding: 0.8rem 0.2rem;
+  }
+
+  .top-left {
+    top: -15px;
+    left: 20px;
+  }
+
+  .top-right {
+    top: -15px;
+    right: 20px;
+  }
+
+  .bottom-left {
+    bottom: 40px;
+    left: 15px;
+  }
+
+  .bottom-right {
+    bottom: 40px;
+    right: 15px;
+  }
+}
+
+/* Show buttons on desktop */
+@media (min-width: 769px) {
+  .nav .btns {
+    display: none;
+  }
+
+  .btns {
+    display: flex;
+    gap: 1rem;
+  }
+}
+
+
+/* ---------- Responsive Design ---------- */
+
+/* Large desktops */
+@media (min-width: 1441px) {
+  .hero-section {
+    padding: 0 8%;
+  }
+}
+
+/* Laptops and small desktops */
+@media (max-width: 1200px) {
+  .nav {
+    margin-left: 80px;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+  }
+
+  .avatars {
+    left: -200px;
+  }
+
+  .cta {
+    right: -200px;
+  }
+}
+
+/* Large tablets & small laptops */
+@media (max-width: 1024px) {
+  .hero-header {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.5rem 0;
+  }
+
+  .nav {
+    margin-left: 0;
+    flex: none;
+    order: 3;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .btns {
+    margin-top: 0;
+    justify-content: center;
+  }
+
+  .hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .side-text {
+    font-size: 1.5rem;
+    letter-spacing: 1rem;
+  }
+
+  .hero-image {
+    margin-top: -150px;
+    height: 500px;
+  }
+
+  .avatars {
+    left: -150px;
+  }
+
+  .cta {
+    right: -150px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 900px) {
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .img-wrap {
+    max-width: 95%;
+  }
+
+  .stat-card {
+    width: 100px;
+    padding: 0.8rem 0.2rem;
+  }
+
+  .stat-icon {
+    font-size: 1.7rem;
+  }
+
+  .stat-card h3 {
+    font-size: 1.4rem;
+  }
+
+  .avatars {
+    left: -100px;
+  }
+
+  .avatars img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .cta {
+    right: -120px;
+    padding: 0.9rem 1.8rem;
+  }
+}
+
+/* Small tablets and large phones */
+@media (max-width: 600px) {
+  .hero-section {
+    padding: 0 5%;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-image {
+    height: 350px;
+    margin-top: 0;
+  }
+
+  .stat-card {
+    width: 90px;
+    padding: 0.6rem;
+  }
+
+  .stat-icon {
+    font-size: 1.5rem;
+  }
+
+  .stat-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .stat-card p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+  .hero-header {
+    padding: 1rem 0;
+  }
+
+  .logo-mark {
+    width: 50px;
+    height: 42px;
+  }
+
+  .logo-text {
+    font-size: 1.1rem;
+  }
+
+  /* MOBILE: Big title for phones */
+  .hero-title {
+    font-size: 2.2rem;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+  }
+
+  /* MOBILE: Big image for phones */
+  .hero-image {
+    height: 350px;
+    margin-top: 0;
+    border-radius: 20px;
+    width: 90%;
+  }
+
+  .btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .stat-card {
+    width: 80px;
+    padding: 0.5rem;
+  }
+
+  .stat-icon {
+    font-size: 1.3rem;
+  }
+
+  .stat-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .stat-card p {
+    font-size: 0.7rem;
+  }
+
+  .top-left {
+    top: -10px;
+    left: 10px;
+  }
+
+  .top-right {
+    top: -10px;
+    right: 10px;
+  }
+
+  .bottom-left {
+    bottom: 30px;
+    left: 5px;
+  }
+
+  .bottom-right {
+    bottom: 30px;
+    right: 5px;
+  }
+
+  /* MOBILE: Side buttons for phones */
+  .side-text {
+    font-size: 1.2rem;
+    letter-spacing: 0.8rem;
+    padding: 8px 12px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-image {
+    height: 280px;
+  }
+
+  .stat-card {
+    width: 70px;
+    padding: 0.4rem;
+  }
+
+  .btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.85rem;
+  }
+
+  .side-text {
+    font-size: 1rem;
+    letter-spacing: 0.6rem;
+    padding: 6px 10px;
+  }
+}/* ---------- MOBILE PATCH ---------- */
+@media (max-width: 768px) {
+    .nav {
+    margin-left: 0 !important;   /* FIX */
+    left: 50%;                    /* keep center */
+    transform: translate(-50%, -50%);
+  }
+
+  .avatars,
+  .cta {
+    display: none !important;
+  }
+
+
+  .hero-title {
+    font-size: 3rem;
+  }
+  /* .nav .btn {
+    font-size: 1.1rem;
+    padding: 1rem 2rem;
+  } */
+  .hero-image {
+    height: 420px;
+  }
+
+  /* Keep side-text same, just a bit bigger */
+  .side-text {
+    font-size: 1.5rem;
+  }
+}
+
+

@@ -1,0 +1,145 @@
+.limits-section {
+    background-color: #0a0a0a;
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px;
+    font-family: "Oswald", sans-serif;
+}
+
+/* Header */
+.limits-header {
+    margin-bottom: 60px;
+}
+
+.limits-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+}
+
+.limits-title .highlighted-text {
+    background: #EAFD92;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 800;
+}
+
+.limits-subtitle {
+    font-size: 0.8rem;
+    line-height: 1.6;
+    font-weight: 300;
+    margin-bottom: 15px;
+    color: #cccccc;
+}
+
+/* .why-choose {
+    color: #ff6600;
+    font-weight: 600;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+} */
+
+.push-title {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+
+/* Features Grid */
+.limits-features {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+
+.feature-box {
+    flex: 1 1 250px;
+    max-width: 220px;
+    background: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+    transform: translateY(-8px);
+    
+}
+
+/* icon Style */
+.icon-circle  {
+    background-color: #1c1c1c;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+
+.feature-icon {
+    color: #D5F44E;
+    font-size: 40px;
+}
+
+
+
+/* Text Styles */
+.feature-box h3 {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.feature-box p {
+    color: #b8b8b8;
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .push-title {
+        font-size: 2rem;
+    }
+
+    .feature-box {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .push-title {
+        font-size: 1.8rem;
+    }
+
+    .limits-features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}

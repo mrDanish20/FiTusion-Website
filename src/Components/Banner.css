@@ -1,0 +1,81 @@
+.banner-section {
+    width: 100%;
+    height: 550px;
+    position: relative;
+  
+    overflow: hidden;
+}
+
+/* Background image */
+.banner-img img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+    filter: brightness(0.6);
+    /* dark overlay effect for better text visibility */
+}
+
+/* ✅ Text overlay */
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    z-index: 2;
+}
+
+.banner-content h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+    font-weight: 400;
+    color: #f1f1f1;
+}
+
+.banner-btn {
+    background: linear-gradient(90deg, #9acd03, #aacc04);
+    padding: 1rem 1.9rem;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    font-weight: 550;
+    white-space: nowrap;
+}
+
+.banner-btn:hover {
+    background: linear-gradient(90deg, #9acd03, #aacc04);
+    color: #ffffff;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .banner-section {
+        height: 400px;
+    }
+
+    .banner-img img {
+        height: 400px;
+    }
+
+    .banner-content h2 {
+        font-size: 1.6rem;
+    }
+
+    .banner-content p {
+        font-size: 1rem;
+    }
+
+    .banner-btn {
+        padding: 10px 22px;
+        font-size: 0.9rem;
+    }
+}
