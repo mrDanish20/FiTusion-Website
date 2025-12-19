@@ -1,7 +1,7 @@
 {
   "name": "frontend",
   "version": "0.1.0",
-  "homepage": "https://mrDanish20.github.io/FiTusion-Website",
+  "homepage": "https://mrdanish20.github.io/FiTusion-Website",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.1.0",
